@@ -40,7 +40,7 @@ if !exists('g:vim_reveal_loaded') || g:vim_reveal_loaded == 0
 
   function! s:Md2Reveal()
     let md_file = expand('%:p')
-    let output_file = substitute(md_file, '\.md$', '.html', '')
+    let output_file = expand('%<') . '.html'
     let content = s:GetContent()
     let Metadata = s:GetMetadata(s:default_config, g:reveal_config)
     wincmd n
