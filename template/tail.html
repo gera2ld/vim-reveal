@@ -1,38 +1,10 @@
   </div>
 </div>
-<script src="{% root_path %}/lib/js/head.min.js"></script>
-<script src="{% root_path %}/js/reveal.js"></script>
 <script>
-  Reveal.initialize({
-    controls: {% controls %},
-    progress: {% progress %},
-    history: {% history %},
-    keyboard: {% keyboard %},
-    touch: {% touch %},
-    center: {% center %},
-    loop: {% loop %},
-    rtl: {% rtl %},
-    mouseWheel: {% mouseWheel %},
-    margin: {% margin %},
-    minScale: {% minScale %},
-    maxScale: {% maxScale %},
-    autoSlide: {% autoSlide %},
-    width: {% width %},
-    height: {% height %},
-    theme: '{% theme %}',
-    transition: '{% transition %}',
-    transitionSpeed: '{% transitionSpeed %}',
-    backgroundTransition: '{% backgroundTransition %}',
-    // Optional libraries used to extend on reveal.js
-    dependencies: [
-      { src: '{% root_path %}/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: '{% root_path %}/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: '{% root_path %}/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-      { src: '{% root_path %}/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-      { src: '{% root_path %}/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-      { src: '{% root_path %}/plugin/math/math.js', async: true }
-    ]
-  });
+const deck = new Reveal({
+   plugins: [ RevealMarkdown ],
+});
+deck.initialize();
 </script>
 </body>
 </html>
