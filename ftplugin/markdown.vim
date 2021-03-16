@@ -26,7 +26,7 @@ if !exists('g:vim_reveal_loaded') || g:vim_reveal_loaded == 0
       silent! execute '%s/{%\s*'.mkey.'\s*%}/'.substitute(mvalue, '\/', '\\/', 'g').'/g'
     endfor
     call append(endofhead, content)
-    1
+    go
     write!
     close
     execute 'silent !open '.output_file
@@ -55,7 +55,7 @@ if !exists('g:vim_reveal_loaded') || g:vim_reveal_loaded == 0
     let context = {}
     let context.content = []
     let context.level = 0
-    1
+    go
     while 1
       let header1 = search('^#\{1,2\}\s\+', 'eW')
       let header2 = search('^#\{1,2\}\s\+', 'nW')
