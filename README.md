@@ -1,5 +1,7 @@
 # vim-reveal
 
+DEPRECATED in favor of [coc-reveal](https://github.com/gera2ld/coc-reveal).
+
 vim plugin that use markdown and reveal.js to generate presentations.
 
 This plugin is based on [blindFS/vim-reveal](https://github.com/blindFS/vim-reveal) with the following features:
